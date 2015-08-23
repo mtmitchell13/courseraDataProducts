@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Old Faithful Eruption Prediction</title>
+  <meta charset="utf-8">
+  <meta name="description" content="Old Faithful Eruption Prediction">
+  <meta name="author" content="MM">
+  <meta name="generator" content="slidify" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta http-equiv="X-UA-Compatible" content="chrome=1">
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/default.css" media="all" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/phone.css" 
+    media="only screen and (max-device-width: 480px)" >
+  <link rel="stylesheet" href="libraries/frameworks/io2012/css/slidify.css" >
+  <link rel="stylesheet" href="libraries/highlighters/highlight.js/css/tomorrow.css" />
+  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->  <link rel=stylesheet href="./assets/css/ribbons.css"></link>
+
+  
+  <!-- Grab CDN jQuery, fall back to local if offline -->
+  <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.7.min.js"></script>
+  <script>window.jQuery || document.write('<script src="libraries/widgets/quiz/js/jquery.js"><\/script>')</script> 
+  <script data-main="libraries/frameworks/io2012/js/slides" 
+    src="libraries/frameworks/io2012/js/require-1.0.8.min.js">
+  </script>
+  
+  
+
+</head>
+<body style="opacity: 0">
+  <slides class="layout-widescreen">
+    
+    <!-- LOGO SLIDE -->
+        <slide class="title-slide segue nobackground">
+  <hgroup class="auto-fadein">
+    <h1>Old Faithful Eruption Prediction</h1>
+    <h2>Shiny Application</h2>
+    <p>MM<br/></p>
+  </hgroup>
+  <article></article>  
+</slide>
+    
+
+    <!-- SLIDES -->
+    <slide class="" id="slide-1" style="background:;">
+  <hgroup>
+    <h2>Background</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p>This presentation introduces you to a brand new Shiny App created for the <em>Developing Data Products</em> class on Coursera</p></li>
+<li><p>In this presentation you&#39;ll:</p>
+
+<ul>
+<li>Learn about what the app is and how to use it;</li>
+<li>Take a look at the data used to develop the app; and</li>
+<li>See where to access and use the app</li>
+</ul></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-2" style="background:;">
+  <hgroup>
+    <h2>Description of the App</h2>
+  </hgroup>
+  <article data-timings="">
+    <p><strong>What does the app do?</strong></p>
+
+<ul>
+<li>The app predicts the duration of an eruption for the Old Faithful geyser in Yellowstone National Park in Wyoming, USA</li>
+<li>The prediction is based on waiting time between eruptions</li>
+<li>Both the input (waiting time) and the prediction output are measured in minutes</li>
+<li>The app was developed using the <em>faithful</em> dataset from the <strong>datasets</strong> package</li>
+</ul>
+
+<p><strong>How do I use the app?</strong></p>
+
+<ul>
+<li>Access the app via the link provided on <em>Slide 5</em></li>
+<li>Input a numeric value for the waiting time between eruptions</li>
+<li>Hit the <strong>Submit</strong> button</li>
+<li>View and be entertained by the predicted duration of the eruption (result is in minutes)</li>
+<li>The minimum meaningful waiting time accepted by the model is 25 minutes and the maximum is unbounded.</li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-3" style="background:;">
+  <hgroup>
+    <h2>The Data Behind the Prediction Model</h2>
+  </hgroup>
+  <article data-timings="">
+    <pre><code class="r">library(ggplot2); data(&quot;faithful&quot;)
+ggplot(faithful, aes(waiting, eruptions)) + geom_point() + geom_smooth(method=lm, se=FALSE)
+</code></pre>
+
+<p><img src="assets/fig/unnamed-chunk-1-1.png" alt="plot of chunk unnamed-chunk-1"> </p>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+<slide class="" id="slide-4" style="background:;">
+  <hgroup>
+    <h2>Where do I access the app?</h2>
+  </hgroup>
+  <article data-timings="">
+    <ul>
+<li><p><a href="https://mtmitchell13.shinyapps.io/courseraDataProducts">https://mtmitchell13.shinyapps.io/courseraDataProducts</a></p></li>
+<li><p>Enjoy!</p></li>
+</ul>
+
+  </article>
+  <!-- Presenter Notes -->
+</slide>
+
+    <slide class="backdrop"></slide>
+  </slides>
+  <div class="pagination pagination-small" id='io2012-ptoc' style="display:none;">
+    <ul>
+      <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=1 title='Background'>
+         1
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=2 title='Description of the App'>
+         2
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=3 title='The Data Behind the Prediction Model'>
+         3
+      </a>
+    </li>
+    <li>
+      <a href="#" target="_self" rel='tooltip' 
+        data-slide=4 title='Where do I access the app?'>
+         4
+      </a>
+    </li>
+  </ul>
+  </div>  <!--[if IE]>
+    <script 
+      src="http://ajax.googleapis.com/ajax/libs/chrome-frame/1/CFInstall.min.js">  
+    </script>
+    <script>CFInstall.check({mode: 'overlay'});</script>
+  <![endif]-->
+</body>
+  <!-- Load Javascripts for Widgets -->
+  
+  <!-- LOAD HIGHLIGHTER JS FILES -->
+  <script src="libraries/highlighters/highlight.js/highlight.pack.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <!-- DONE LOADING HIGHLIGHTER JS FILES -->
+   
+  </html>
